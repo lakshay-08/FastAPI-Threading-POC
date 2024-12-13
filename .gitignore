@@ -1,1 +1,14 @@
 venv/
+__pycache__/
+*.env
+
+# Ignore API response file 
+resized_images.zip
+
+# Ignore IDE configuration files
+.vscode/
+.idea/
+
+# Ignore log files
+*.log
+

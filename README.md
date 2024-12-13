@@ -44,7 +44,7 @@ This project provides a FastAPI-based image resizer API that allows users to upl
    ```
 
 ## Usage
-### Running the App
+## Running the App
 
 To run the application locally using Uvicorn:
 ```
@@ -52,23 +52,16 @@ uvicorn app:app --reload
 ```
 ## API Endpoints
 
-### POST /upload/
-
-**Description**: Upload multiple image files to be resized and returned as a ZIP file.
-
-**Request Format**: multipart/form-data
-
-**Request Body**:
-    ```
+## POST /upload/
+    Description: Upload multiple image files to be resized and returned as a ZIP file.
+    Request Format: multipart/form-data
+    Request Body:
     files: (Multiple image files)
-    ```
 
 ## Response:
-    **Status Code**: 200 OK
-
-    **Body**: A ZIP file containing the resized images.
-    
-    **Content-Type**: application/zip    
+    Status Code: 200 OK
+    Body: A ZIP file containing the resized images.
+    Content-Type: application/zip    
 
 ## Versioning
 

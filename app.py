@@ -34,6 +34,7 @@ def process_image(file: bytes):
 
 @app.post("/upload/")
 async def upload_images(files: list[UploadFile] = File(...)):
+    logger.debug("upload/ api called")
     all_resized_images = {}
 
     for file in files:
@@ -47,5 +48,5 @@ async def upload_images(files: list[UploadFile] = File(...)):
         for filename, images in all_resized_images.items():
             for size, image_buf in images.items():
                 zipf.writestr(f"{filename}_image_{size[0]}x{size[1]}.jpg", image_buf.getvalue())
-
+    logger.debug("api response return")
     return FileResponse(zip_filename, media_type="application/zip", filename=zip_filename)
